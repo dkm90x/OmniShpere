@@ -1,0 +1,44 @@
+:root {
+    --cosmic-primary: #2A2356;
+    --stellar-accent: #E94584;
+    --nebula-background: #0F0C24;
+}
+
+body {
+    background: var(--nebula-background);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.omni-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: var(--cosmic-primary);
+    border-bottom: 2px solid var(--stellar-accent);
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.post-container {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+/* Quantum Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.post:hover {
+    animation: pulse 1.5s infinite;
+}
