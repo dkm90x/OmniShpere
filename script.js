@@ -45,3 +45,11 @@ function handleOmniReaction(postId) {
 
 // Initialize Cosmic Interface
 renderOmniFeed();
+// 1. Make all text pink
+document.body.style.color = 'hotpink';
+
+// 2. Create a popup alert
+alert('Welcome to OmniSphere!');
+
+// 3. Add a cosmic border
+document.body.style.border = '10px solid #00ffff';
