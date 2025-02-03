@@ -53,3 +53,20 @@ alert('Welcome to OmniSphere!');
 
 // 3. Add a cosmic border
 document.body.style.border = '10px solid #00ffff';
+function editProfile() {
+    const newName = prompt("Enter your name:", "Cosmic User");
+    const newBio = prompt("Enter your bio:", "Exploring the OmniVerse!");
+    
+    document.getElementById('username').textContent = newName;
+    document.getElementById('bio').textContent = newBio;
+    
+    // Simple "database" using localStorage
+    localStorage.setItem('userName', newName);
+    localStorage.setItem('userBio', newBio);
+}
+
+// Load saved profile
+if(localStorage.getItem('userName')) {
+    document.getElementById('username').textContent = localStorage.getItem('userName');
+    document.getElementById('bio').textContent = localStorage.getItem('userBio');
+}
