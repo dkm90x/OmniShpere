@@ -39,8 +39,20 @@ function renderOmniFeed() {
 }
 
 function handleOmniReaction(postId) {
+    const reactions = ['❤️', '🚀', '😂', '🤯'];
+    const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
+    
     omniPosts[postId].likes++;
+    
+    // Visual feedback
+    const postElement = document.querySelectorAll('.post')[postId];
+    postElement.style.transform = 'scale(1.05)';
+    setTimeout(() => postElement.style.transform = 'scale(1)', 200);
+    
+    // Update display
     renderOmniFeed();
+    
+    console.log(`User reacted ${randomReaction} to post ${postId}`);
 }
 
 // Initialize Cosmic Interface
