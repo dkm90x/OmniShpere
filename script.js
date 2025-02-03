@@ -70,3 +70,19 @@ if(localStorage.getItem('userName')) {
     document.getElementById('username').textContent = localStorage.getItem('userName');
     document.getElementById('bio').textContent = localStorage.getItem('userBio');
 }
+function createPost() {
+    const postText = document.getElementById('newPost').value;
+    
+    if(postText) {
+        omniPosts.push({
+            type: 'social',
+            user: localStorage.getItem('userName') || 'Anonymous',
+            content: postText,
+            likes: 0,
+            timestamp: new Date()
+        });
+        
+        renderOmniFeed();
+        document.getElementById('newPost').value = ''; // Clear input
+    }
+}
