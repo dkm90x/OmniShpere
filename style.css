@@ -42,3 +42,19 @@ body {
 .post:hover {
     animation: pulse 1.5s infinite;
 }
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--stellar-accent);
+}
+
+.hidden {
+    display: none;
+}
+
+#profile {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
